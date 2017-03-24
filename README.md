@@ -26,6 +26,7 @@ easyLink插件
     //示例代码如下:
     
     //SWITCH类型  所有参数都不能为null;
+    
     easyLink.startSearch("wifiSSid", "wifiPsw","SWITCH","88740009","192.168.14.215","9778", function (message) {
       alert(message);
     }, function (message) {
