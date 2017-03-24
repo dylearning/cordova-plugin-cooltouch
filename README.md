@@ -30,7 +30,6 @@ easyLink插件
     }, function (message) {
       alert(message);
     });
-    
     //TDMEC类型  wifi名称和wifi密码不能为null,其他参数可以为null。
     easyLink.startSearch("wifiSSid", "wifiPsw",null,null,null,null, function (message) {
       alert(message);
