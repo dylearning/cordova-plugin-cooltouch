@@ -26,14 +26,14 @@ easyLink插件
     //如果是SWITCH类型所传的参数都不能为null,如果是TDMEC类型wifi名称和wifi密码不能为null,其他参数可以为null。
     //示例代码如下:
     //SWITCH类型
-    easyLink.startSearch($scope.wifiSSid, wifiPsw,"SWITCH","88740009","192.168.14.215","9778", function (message) {
+    easyLink.startSearch("wifiSSid", "wifiPsw","SWITCH","88740009","192.168.14.215","9778", function (message) {
       alert(message);
     }, function (message) {
       alert(message);
     });
     
     //TDMEC类型
-    easyLink.startSearch($scope.wifiSSid, wifiPsw,null,null,null,null, function (message) {
+    easyLink.startSearch("wifiSSid", "wifiPsw",null,null,null,null, function (message) {
       alert(message);
     }, function (message) {
       alert(message);
