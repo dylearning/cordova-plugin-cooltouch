@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-       Author KongYang, 橙朴上海智能科技有限公司 COOLTOUCH CHINA.
-       联系方式: 4008-7676-82
--->
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
