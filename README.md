@@ -22,17 +22,15 @@ easyLink插件
     
     //开始配网,配网成功如果是TDMEC会返回ip和psn的jsonString,如果是SWITCH会返回device_id和type_id的jsonString。
     //参数说明:
-    //wifi名称,wifi对应的密码,设备通信协议类型,设备psn,要连接服务器的serviceIp,要连接服务器的port;所有的都是String类型。
-    //如果是SWITCH类型所传的参数都不能为null,如果是TDMEC类型wifi名称和wifi密码不能为null,其他参数可以为null。
+    //wifi名称,wifi对应的密码,设备通信协议type,设备psn,要连接服务器的serviceIp,要连接服务器的port;所有的都是String类型。
     //示例代码如下:
-    //SWITCH类型
+    //SWITCH类型  所有参数都不能为null;
     easyLink.startSearch("wifiSSid", "wifiPsw","SWITCH","88740009","192.168.14.215","9778", function (message) {
       alert(message);
     }, function (message) {
       alert(message);
     });
-    
-    //TDMEC类型
+    //TDMEC类型  wifi名称和wifi密码不能为null,其他参数可以为null。
     easyLink.startSearch("wifiSSid", "wifiPsw",null,null,null,null, function (message) {
       alert(message);
     }, function (message) {
