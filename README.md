@@ -24,7 +24,7 @@ easyLink插件
     //参数说明:
     //wifi名称,wifi对应的密码,设备通信协议type,设备psn,要连接服务器的serviceIp,要连接服务器的port;所有的都是String类型。
     //示例代码如下:
-    //SWITCH类型 所有参数不可为null。
+     //SWITCH类型 所有参数不可为null。
     easyLink.startSearch("wifiSSid", "wifiPsw","SWITCH","88740009","192.168.14.215","9778", function (message) {
       alert(message);
     }, function (message) {
