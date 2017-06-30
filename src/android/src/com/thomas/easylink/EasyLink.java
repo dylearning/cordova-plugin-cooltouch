@@ -72,9 +72,9 @@ public class EasyLink extends CordovaPlugin {
 				return true;
 			}
 			String type = args.getString(2);
-			if ("SWITCH".equals(type)){
+			if ("EasyLink_CT".equals(type)){
 				ftcService(args, callbackContext);
-			}else {
+			}else if("EasyLink".equals(type)){
 //				this.callbackContext = callbackContext;
 				easyLinkService(args,callbackContext);
 			}
