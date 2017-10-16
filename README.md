@@ -26,7 +26,7 @@ easyLink插件
     //示例代码如下:
     
     //EasyLink_CT类型 所有参数不可为null。
-    easyLink.startSearch("wifiSSid", "wifiPsw","EasyLink_CT","88740009","192.168.14.215","9778", function (message) {
+    easyLink.startSearch("wifiSSid", "wifiPsw","EasyLink_CT","88740009","0.0.0.0","0000", function (message) {
       alert(message);
     }, function (message) {
       alert(message);
