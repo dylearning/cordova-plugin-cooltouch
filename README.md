@@ -4,9 +4,7 @@
 
 ## Installation
 
-## Installation
-
-    cordova plugin add https://github.com/GTDistance/ionic-mico-sdk.git
+    cordova plugin add https://github.com/dylearning/cordova-plugin-cooltouch.git
 
 ## Uninstall
    cordova plugin rm cordova-plugin-cooltouch
