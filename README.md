@@ -1,14 +1,14 @@
-# ionic-mico-sdk
-easyLink插件
-## Installation
+# cooltouch 智能开关面板
+   橙朴(上海)智能科技有限公司
+   ionic-mico-sdk easyLink插件
 
-    cordova plugin add https://github.com/GTDistance/ionic-mico-sdk.git
+## Installation
+   cordova plugin add https://github.com/dylearning/cordova-plugin-cooltouch.git
     
 ## Uninstall
-    cordova plugin rm ionic-mico-sdk
+   cordova plugin rm cordova-plugin-cooltouch
     
 ### Supported Platforms
-
 - Android
 - iOS
 
