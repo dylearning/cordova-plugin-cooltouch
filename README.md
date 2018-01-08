@@ -3,8 +3,8 @@
    ionic-mico-sdk easyLink插件
 
 ## Installation
-   cordova plugin add https://github.com/dylearning/cordova-plugin-cooltouch.git
-    
+   cordova plugin add https://github.com/GTDistance/ionic-mico-sdk.git
+
 ## Uninstall
    cordova plugin rm cordova-plugin-cooltouch
     
