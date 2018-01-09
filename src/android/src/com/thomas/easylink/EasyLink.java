@@ -29,7 +29,7 @@ public class EasyLink extends CordovaPlugin {
 	}
 	@Override
 	public boolean execute(String action, final JSONArray args,final CallbackContext callbackContext) throws JSONException {
-        if ("startSearch".equals(action)) {
+		if ("startSearch".equals(action)) {
 
 			Log.e("dengying","execute startSearch");
 
@@ -69,22 +69,22 @@ public class EasyLink extends CordovaPlugin {
 	private void ftcService(final JSONArray args, final CallbackContext callbackContext) {
 
 		cordova.getThreadPool().execute(new Runnable() {
-            public void run() {
-                try {
-                    if(ftcService != null) {
-                        ftcService.stopTransmitting();
-                        ftcService = null;
-                    }
-                    ftcService = FTC_Service.getInstence();
+			public void run() {
+				try {
+					if(ftcService != null) {
+						ftcService.stopTransmitting();
+						ftcService = null;
+					}
+					ftcService = FTC_Service.getInstence();
 					String ssid = args.getString(0);
 					String password = args.getString(1);
 					final String psn = args.getString(2);
 					String serviceIp = args.getString(3);
 					String port = args.getString(4);
-                    JSONObject jsonObject = new JSONObject();
-                    jsonObject.put("host",serviceIp);
-                    jsonObject.put("port",Integer.valueOf(port));
-                    ftcService.transmitSettings(ssid,password, jsonObject.toString(), mWifiManager.getCurrentIpAddressConnectedInt(),
+					JSONObject jsonObject = new JSONObject();
+					jsonObject.put("host",serviceIp);
+					jsonObject.put("port",Integer.valueOf(port));
+					ftcService.transmitSettings(ssid,password, jsonObject.toString(), mWifiManager.getCurrentIpAddressConnectedInt(),
 							new FTC_Listener(){
 								@Override
 								public void onFTCfinished(Socket s, String jsonString) {
@@ -101,14 +101,14 @@ public class EasyLink extends CordovaPlugin {
 									Log.e("dengying","isSmallMTU");
 									System.out.println("isSmallMTU");
 								}
-                    });
-                } catch (JSONException e) {
-                    // TODO Auto-generated catch block
+							});
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
 					Log.e("dengying","JSONException");
-                    callbackContext.error("Wifi Init Error!");
-                }
-            }
-        });
+					callbackContext.error("Wifi Init Error!");
+				}
+			}}
+		);
 	}
 
 	private void sendPsnToDevice(String psn){
