@@ -1,9 +1,9 @@
 {
-  "name": "ionic-mico-sdk",
+  "name": "cordova-plugin-cooltouch",
   "version": "1.0.3",
   "description": "Cordova Console Plugin",
   "cordova": {
-    "id": "ionic-mico-sdk",
+    "id": "cordova-plugin-cooltouch",
     "platforms": [
       "ios",
       "ubuntu",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GTDistance/ionic-mico-sdk"
+    "url": "https://github.com/dylearning/cordova-plugin-cooltouch"
   },
   "keywords": [
     "cordova",

@@ -3,7 +3,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:rim="http://www.blackberry.com/ns/widgets"
-    id="ionic-mico-sdk"
+    id="cordova-plugin-cooltouch"
     version="2.1.0">
     <name>MicoSDK</name>
     <description>Ionic MicoSDK bridge Plugin</description>
