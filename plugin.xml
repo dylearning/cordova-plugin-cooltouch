@@ -9,7 +9,6 @@
     <description>Ionic MicoSDK bridge Plugin</description>
     <license>Apache 2.0</license>
     <keywords>ionic,microsdk</keywords>
-    <!-- <repo>git@github.com:Qianxun/ionic-microsdk-plugin.git</repo> -->
 
     <js-module src="www/MicoSDK.js" name="easyLink">
         <clobbers target="easyLink" />
@@ -34,25 +33,6 @@
         <source-file src="src/android/src/com/thomas/easylink/EasyLink.java" target-dir="src/com/thomas/easylink" />
         <source-file src="src/android/src/com/thomas/easylink/UDPServer.java" target-dir="src/com/thomas/easylink" />
         <source-file src="src/android/libs/easylink_sdk.jar" target-dir="libs" />
-        
      </platform>
-  <platform name = "ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="EasyLink">
-                <param name="ios-package" value="CDVEasyLink" />
-            </feature>
-        </config-file>
 
-        <header-file src="src/ios/CDVEasyLink.h" />
-        <source-file src="src/ios/CDVEasyLink.m" />
-        <source-file src="src/ios/EasyLinkSDK" />
-
-        
-        <framework src="AssetsLibrary.framework" />
-        <framework src="AddressBook.framework" />
-        <framework src="AudioToolbox.framework" />
-        <framework src="SystemConfiguration.framework" />
-       <framework src="MobileCoreServices.framework" />
-        <framework src="CoreGraphics.framework" />
-    </platform>
 </plugin>

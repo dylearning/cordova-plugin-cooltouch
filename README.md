@@ -10,7 +10,6 @@
     
 ### Supported Platforms
 - Android
-- iOS
 
 ### Quick Example
     //获取wifi名,成功之后会返回wifi的名称,失败会返回失败的原因

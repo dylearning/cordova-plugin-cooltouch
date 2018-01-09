@@ -25,21 +25,8 @@ var utils = require('cordova/utils'),
 
 var MicoSDK = {};
 
-// MicoSDK.beep = function(successCallback, errorCallback) {
-//     exec(successCallback, errorCallback, "EasyLink", "beep", []);
-// };
-
-MicoSDK.getWifiSSid = function(successCallback, errorCallback) {
-    exec(successCallback, errorCallback, "EasyLink", "getWifiSSid", []);
-};
-
-// MicoSDK.configFTC = function(successCallback, errorCallback, str) {
-//     exec(successCallback, errorCallback, "EasyLink", "configFTC", [str]);
-// };
-
-MicoSDK.startSearch = function(ssid, password,type,psn,serviceIp,port,successCallback, errorCallback) {
-    exec(successCallback, errorCallback, "EasyLink", "startSearch", [ssid, password,type,
-    	psn,serviceIp,port]);
+MicoSDK.startSearch = function(ssid, password,psn,serviceIp,port,successCallback, errorCallback) {
+    exec(successCallback, errorCallback, "EasyLink", "startSearch", [ssid, password,psn,serviceIp,port]);
 };
 MicoSDK.stopSearch = function(successCallback, errorCallback) {
     exec(successCallback, errorCallback, "EasyLink", "stopSearch", []);
