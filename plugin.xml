@@ -31,7 +31,6 @@
         </config-file>
 
         <source-file src="src/android/src/com/thomas/easylink/EasyLink.java" target-dir="src/com/thomas/easylink" />
-        <source-file src="src/android/src/com/thomas/easylink/UDPServer.java" target-dir="src/com/thomas/easylink" />
         <source-file src="src/android/libs/easylink_sdk.jar" target-dir="libs" />
      </platform>
 
