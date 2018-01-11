@@ -26,7 +26,7 @@
     //参数说明:
     //wifi名称,wifi对应的密码,设备psn,要连接服务器的serviceIp,要连接服务器的port;所有的都是String类型
     //EasyLink_CT类型 所有参数不可为null
-    easyLink.startSearch("wifiSSid", "wifiPsw",,"88740009","0.0.0.0","0000", function (message) {
+    easyLink.startSearch("wifiSSid", "wifiPsw","88740009","0.0.0.0","0000", function (message) {
       alert(message);
     }, function (message) {
       alert(message);
