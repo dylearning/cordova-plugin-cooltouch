@@ -26,23 +26,22 @@ public class EasyLink extends CordovaPlugin {
 
 	@Override
 	protected void pluginInitialize() {
+		Log.e("dengying","pluginInitialize");
 
+		mWifiManager = new EasyLinkWifiManager(webView.getContext());
 	}
 	@Override
 	public boolean execute(String action, final JSONArray args,final CallbackContext callbackContext) throws JSONException {
 		if ("getWifiSSid".equals(action)) {
+
 			Log.e("dengying","execute getWifiSSid");
 
-			mWifiManager = new EasyLinkWifiManager(webView.getContext());
 			callbackContext.success(mWifiManager.getCurrentSSID());
+
 			return true;
 		}else if ("startSearch".equals(action)) {
 
 			Log.e("dengying","execute startSearch");
-
-			if(mWifiManager == null) {
-				mWifiManager = new EasyLinkWifiManager(webView.getContext());
-			}
 
 			if(!checkTdmecParam(args,callbackContext)){
 				return true;
