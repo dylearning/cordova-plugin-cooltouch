@@ -25,6 +25,10 @@ var utils = require('cordova/utils'),
 
 var MicoSDK = {};
 
+MicoSDK.getWifiSSid = function(successCallback, errorCallback) {
+    exec(successCallback, errorCallback, "EasyLink", "getWifiSSid", []);
+};
+
 MicoSDK.startSearch = function(ssid, password,psn,serviceIp,port,successCallback, errorCallback) {
     exec(successCallback, errorCallback, "EasyLink", "startSearch", [ssid, password,psn,serviceIp,port]);
 };

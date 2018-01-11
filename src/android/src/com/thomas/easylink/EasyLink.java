@@ -30,11 +30,19 @@ public class EasyLink extends CordovaPlugin {
 	}
 	@Override
 	public boolean execute(String action, final JSONArray args,final CallbackContext callbackContext) throws JSONException {
-		if ("startSearch".equals(action)) {
+		if ("getWifiSSid".equals(action)) {
+			Log.e("dengying","execute getWifiSSid");
+
+			mWifiManager = new EasyLinkWifiManager(webView.getContext());
+			callbackContext.success(mWifiManager.getCurrentSSID());
+			return true;
+		}else if ("startSearch".equals(action)) {
 
 			Log.e("dengying","execute startSearch");
 
-			mWifiManager = new EasyLinkWifiManager(webView.getContext());
+			if(mWifiManager == null) {
+				mWifiManager = new EasyLinkWifiManager(webView.getContext());
+			}
 
 			if(!checkTdmecParam(args,callbackContext)){
 				return true;
@@ -93,7 +101,7 @@ public class EasyLink extends CordovaPlugin {
 					jsonObject.put("host",serviceIp);
 					jsonObject.put("port",Integer.valueOf(port));
 
-                    Log.e("dengying","ftcService.transmitSettings");
+					Log.e("dengying","ftcService.transmitSettings");
 
 					ftcService.transmitSettings(ssid,password, "{\"host\":\""+serviceIp+"\",\"port\":"+port+"}", mWifiManager.getCurrentIpAddressConnectedInt(),
 							new FTC_Listener(){
@@ -140,7 +148,7 @@ public class EasyLink extends CordovaPlugin {
 			ftcService.stopTransmitting();
 			e.printStackTrace();
 
-            Log.e("dengying", "sendPsnToDevice Exception");
+			Log.e("dengying", "sendPsnToDevice Exception");
 		}
 	}
 
