@@ -9,8 +9,9 @@ import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import java.net.Socket;
+
 import java.io.OutputStream;
+import java.net.Socket;
 
 /**
  * This class launches the camera view, allows the user to take a picture,
@@ -76,6 +77,13 @@ public class EasyLink extends CordovaPlugin {
 						ftcService = null;
 					}
 					ftcService = FTC_Service.getInstence();
+
+					//String ssid = "HUAWEI-YS";
+					//String password = "12345678";
+					//String psn = "88740009";
+					//String serviceIp = "101.231.241.28";
+					//String port = "9775";
+
 					String ssid = args.getString(0);
 					String password = args.getString(1);
 					final String psn = args.getString(2);
@@ -84,7 +92,10 @@ public class EasyLink extends CordovaPlugin {
 					JSONObject jsonObject = new JSONObject();
 					jsonObject.put("host",serviceIp);
 					jsonObject.put("port",Integer.valueOf(port));
-					ftcService.transmitSettings(ssid,password, jsonObject.toString(), mWifiManager.getCurrentIpAddressConnectedInt(),
+
+          Log.e("dengying","ftcService.transmitSettings");
+
+					ftcService.transmitSettings(ssid,password, "{\"host\":\""+serviceIp+"\",\"port\":"+port+"}", mWifiManager.getCurrentIpAddressConnectedInt(),
 							new FTC_Listener(){
 								@Override
 								public void onFTCfinished(Socket s, String jsonString) {
@@ -112,7 +123,9 @@ public class EasyLink extends CordovaPlugin {
 	}
 
 	private void sendPsnToDevice(String psn){
-		OutputStream outputStream ;
+    Log.e("dengying", "sendPsnToDevice psn=" + psn);
+
+    OutputStream outputStream ;
 		try {
 			JSONObject accessKeyJson = new JSONObject();
 			accessKeyJson.put("access_key",psn);
@@ -126,6 +139,8 @@ public class EasyLink extends CordovaPlugin {
 			// TODO Auto-generated catch block
 			ftcService.stopTransmitting();
 			e.printStackTrace();
+
+      Log.e("dengying", "sendPsnToDevice Exception");
 		}
 	}
 
