@@ -93,7 +93,7 @@ public class EasyLink extends CordovaPlugin {
 					jsonObject.put("host",serviceIp);
 					jsonObject.put("port",Integer.valueOf(port));
 
-          Log.e("dengying","ftcService.transmitSettings");
+                    Log.e("dengying","ftcService.transmitSettings");
 
 					ftcService.transmitSettings(ssid,password, "{\"host\":\""+serviceIp+"\",\"port\":"+port+"}", mWifiManager.getCurrentIpAddressConnectedInt(),
 							new FTC_Listener(){
@@ -140,7 +140,7 @@ public class EasyLink extends CordovaPlugin {
 			ftcService.stopTransmitting();
 			e.printStackTrace();
 
-      Log.e("dengying", "sendPsnToDevice Exception");
+            Log.e("dengying", "sendPsnToDevice Exception");
 		}
 	}
 
